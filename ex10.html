@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+        var coding = {
+            "a":"going",
+            "b":"ash"
+        };
+        document.write("a : "+coding.a+"<br>");
+        document.write("b : "+coding.b+"<br>");
+        coding.c = "ash";
+        document.write("c : "+coding.c+"<br>");
+        coding["d"] = "just";
+        document.write("d : "+coding["d"]+"<br>");
+    </script>
+    <h2>Iterate</h2>
+    <script>
+    for(var key in coding){
+        document.write(key+' : '+coding[key]+'<br>');
+    }
+    //객체 안에 명령어는 메소드 
+    //객체안의 변수는 프로퍼티
+    </script>
+    
+    <h2>Property & method</h2>
+    <script>
+        coding.showAll = function(){
+            for(var key in this) {
+                document.write(key+' : '+this[key]+'<br>');
+            }
+        }
+        coding.showAll();
+    </script>
+</body>
+</html>
